@@ -20,7 +20,7 @@ export class MenuOption extends Component {
 
   _getMenusOnSelect() {
     const menu = this.props.ctx.menuActions._getOpenedMenu();
-    return menu.instance.props.onSelect;
+    return menu && menu.instance ? menu.instance.props.onSelect : () => {};
   }
 
   _getCustomStyles() {

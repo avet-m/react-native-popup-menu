@@ -2469,7 +2469,7 @@
       value: function _getMenusOnSelect() {
         var menu = this.props.ctx.menuActions._getOpenedMenu();
 
-        return menu.instance.props.onSelect;
+        return menu && menu.instance ? menu.instance.props.onSelect : function () {};
       }
     }, {
       key: "_getCustomStyles",
